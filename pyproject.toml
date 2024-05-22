@@ -1,0 +1,34 @@
+[tool.poetry]
+name = "rsserpent-plugin-pubdev"
+version = "0.1.0"
+
+authors = ["EkkoG <beijiu572@gmail.com>"]
+description = "An rsserpent plugin for Admob sdk update."
+keywords = ["rss"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8.0"
+rsserpent = ">=0.1.4"
+
+[tool.poetry.plugins."rsserpent.plugin"]
+"applovin" = "rsserpent_plugin_pubdev:plugin"
+
+[tool.black]
+include = '\.pyi?$'
+target-version = ["py36", "py37", "py38", "py39"]
+
+[tool.isort]
+balanced_wrapping = true
+combine_as_imports = true
+lines_after_imports = 2
+profile = "black"
+
+[tool.nitpick]
+style = "https://raw.githubusercontent.com/RSSerpent/RSSerpent/master/styles/main.toml"
+cache = "1 day"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
