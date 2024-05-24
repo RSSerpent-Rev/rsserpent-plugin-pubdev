@@ -1,4 +1,4 @@
-from rsserpent.models import Persona, Plugin
+from rsserpent_rev.models import Persona, Plugin
 
 from . import route
 
@@ -11,7 +11,7 @@ plugin = Plugin(
         email="beijiu572@gmail.com",
     ),
     prefix="/pubdev/update",
-    repository="https://github.com/EkkoG/rsserpent-plugin-pubdev",
+    repository="https://github.com/RSSerpent-Rev/rsserpent-plugin-pubdev",
     routers={
         route.path: route.provider,
     },

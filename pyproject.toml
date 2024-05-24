@@ -9,8 +9,20 @@ license = "MIT"
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.8.0"
-rsserpent = ">=0.1.4"
+python = "^3.10.0"
+rsserpent-rev = ">=0.1.4"
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^2.15.0"
+uvicorn = "^0.15.0"
+# testing
+pytest = "^6.2.4"
+pytest-asyncio = "^0.16.0"
+pytest-cov = "^3.0.0"
+pytest-randomly = "^3.10.1"
+pytest-xdist = "^2.3.0"
+requests = "^2.26.0"
+
 
 [tool.poetry.plugins."rsserpent.plugin"]
 "applovin" = "rsserpent_plugin_pubdev:plugin"
